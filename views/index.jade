@@ -6,6 +6,9 @@ block content
   h1= title
   p Welcomse to #{title}
   p Silly you hahahahah
-  p Silly you hahahahah
-  p Silly you hahahahah
-  p Silly you hahahahah
+  p trying to display #{phylogenies}
+
+  each phylo, i in phylogenies
+    p (value=i)   Phylogeny #{phylo}
+    p same 
+  p LAMBDO
