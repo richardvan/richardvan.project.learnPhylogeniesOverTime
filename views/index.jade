@@ -3,12 +3,22 @@ script(src="/javascripts/bundle.js")
 extends layout
 
 block content
-  h1= title
+  h1  Quickstart ( Express set up and more
   p Welcomse to #{title}
-  p Silly you hahahahah
   p trying to display #{phylogenies}
-
   each phylo, i in phylogenies
     p (value=i)   Phylogeny #{phylo}
     p same 
   p LAMBDO
+
+//  #phylocanvasHere
+//  h1= title
+
+//  // # usually would use browserify to handle this (which it might be?)
+//  script(type='application/javascript', src='https://cdn.rawgit.com/phylocanvas/phylocanvas-	quickstart/v2.7.2/phylocanvas-quickstart.js')
+//  script(type='application/javascript').
+//    (function (Phylocanvas) {
+//    var tree = Phylocanvas.createTree('phylocanvasHere');
+//    tree.load('(Saldddmonella Aureus:0.1, E.Coli:0.2,(Lambdooo:0.3,DoGGY:0.4) Hello SS:0.5)Feres;');
+//    })(window.Phylocanvas);
+//  // ## 

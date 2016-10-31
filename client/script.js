@@ -1,1 +1,3 @@
- var $ = require('jquery');
+
+var $ = require('jquery');
+var Phylocanvas = require('Phylocanvas');
