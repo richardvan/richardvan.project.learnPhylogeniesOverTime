@@ -3,28 +3,22 @@ script(src="/javascripts/bundle.js")
 extends layout
 
 block content
-  h2  Species List
-  p trying to display #{specimens}
-  each specimen, i in specimens
-    div
-      pre Common Name:
-          b #{specimen._common_name}
-      pre         Phylum: #{specimen._classification_phylum}
-      if (specimen._classification_subphylum)
-        = div
-          pre         Subphylum: #{specimen._classification_subphylum}
-      pre           Genus: #{specimen._classification_genus}
-  h2 Phylocanvas Quickstart (initialization code from website)
+  h2  Species in Phylocanvas (I have learned so far)
   #phylocanvas
+  #phylocanvas2
   script(type='application/javascript', src='https://cdn.rawgit.com/phylocanvas/phylocanvas-quickstart/v2.7.2/phylocanvas-quickstart.js')
   script(type='application/javascript').
     (function (Phylocanvas) {
-      var tree = Phylocanvas.createTree('phylocanvas',{zoom: 0.25, disableZoom:false, showInternalNodeLabels: true});
+      var tree = Phylocanvas.createTree('phylocanvas',{zoom: 0.22, disableZoom:true, showInternalNodeLabels: true});
       tree.setTreeType('rectangular');
       tree.setNodeSize(10);
       tree.setTextSize(16);
       tree.lineWidth = 2.5;
-
-      console.log(tree.load('(((Bryophyta-phylum:0.05, Pterophyta-phylum:0.1, Cycadophyta-phylum:0.15, Gingkophyta-phylum:0.2, Gnetophyta-phylum:0.25, Coniferophyta-phylum:0.3, Anthophyta-phylum:0.35) Plantae-kingdom:0.05 ),((Alloymycese-genus:0.05) Chytridiomycota-phylum:0.05,(Rhizopus-genus:0.05) Zygomycota-phylum:0.10,(Penicillium-genus:0.05,Aspergillus-genus:0.10,Peziza-genus:0.15,Saccharomyces-genus:0.20) Ascomycota-phlum:0.15,(Agaricus-genus:0.05,Coprinus-genus:0.1) Basidiomycota:0.20) Fungi-kingdom:0.1 ,((sponge:0.1)Porifera-phylum:0.1,(Hydra:0.1, Metridium:0.1, Jellyfish:0.15, Coral:0.15)Cnidaria-phylum: 0.15,(Dugesia:0.1, Flatworm:0.15)Platyhelminthes-phylum: 0.20,(Trichinella:0.1,Ascaris:0.1,Vinegar-Eel:0.1) Nematoda-phlyum:0.25,(Gastropoda:0.1, Bivalvia:0.1, Cephalopoda-class:0.1) Mollusca-phylum:0.3,(Lumbricus:0.1,Leeches:0.1) Annelida-phylum:0.35,((Limulus_horshoeCrab:0.1, Arachnids:0.1) Chelicerata-subphylum:0.1,(Crayfish:0.1) Crustacea-subphylum:0.1,((millipedes:0.1)Diplopoda-class:0.1,(centipedes:0.1)Chilopoda-class:0.1,(grasshopper:0.1) Insecta-class:0.1) Uniramia-subphylum:0.1) Arthropoda-phylum:0.40,(SeaStar:0.1,OtherEchino:0.1) Enchinodermata-phylum: 0.45,(humans: 0.1) Chordata-phylum:0.50) Animalia-kingdom:0.15) Eukarya-domain ;' ));
-  
+      console.log(tree.load('(((Bryophyta-phylum:0.05, Pterophyta-phylum:0.1, Cycadophyta-phylum:0.15, Gingkophyta-phylum:0.2, Gnetophyta-phylum:0.25, Coniferophyta-phylum:0.3, Anthophyta-phylum:0.35) Plantae-kingdom:0.05 ),((Alloymycese-genus:0.05) Chytridiomycota-phylum:0.05,(Rhizopus-genus:0.05) Zygomycota-phylum:0.10,(Penicillium-genus:0.05,Aspergillus-genus:0.10,Peziza-genus:0.15,Saccharomyces-genus:0.20) Ascomycota-phlum:0.15,(Agaricus-genus:0.05,Coprinus-genus:0.1) Basidiomycota:0.20) Fungi-kingdom:0.1 ,((sponge:0.1)Porifera-phylum:0.1,(Hydra:0.1, Metridium:0.1, Jellyfish:0.15, Coral:0.15)Cnidaria-phylum: 0.15,(Dugesia:0.1, Flatworm:0.15)Platyhelminthes-phylum: 0.20,(Trichinella:0.1,Ascaris:0.1,Vinegar-Eel:0.1) Nematoda-phlyum:0.25,(Gastropoda:0.1, Bivalvia:0.1, Cephalopoda-class:0.1) Mollusca-phylum:0.3,(Lumbricus:0.1,Leeches:0.1) Annelida-phylum:0.35,((Limulus_horshoeCrab:0.1, Arachnids:0.1) Chelicerata-subphylum:0.1,(Crayfish:0.1) Crustacea-subphylum:0.1,((millipedes:0.1)Diplopoda-class:0.1,(centipedes:0.1)Chilopoda-class:0.1,(grasshopper:0.1) Insecta-class:0.1) Uniramia-subphylum:0.1) Arthropoda-phylum:0.40,(SeaStar:0.1,OtherEchino:0.1) Enchinodermata-phylum: 0.45,((Tunicates:0.1)Urochordata-subphylum: 0.1,(Lancelets:0.1) Cephalochordata-subphulum:0.13,(Agnatha-superclass:0.005,Chondrichthyes-class:0.01,Osteichthyes-class:0.02,Amphibia-class:0.03, Saurposida-clade:0.04, Mammalia-class:0.05) Vertebrata-subphylum:0.16) Chordata-phylum:0.50) Animalia-kingdom:0.15) Eukarya-domain ;' ));
+      var tree2 = Phylocanvas.createTree('phylocanvas2',{zoom: 0.25, disableZoom:true, showInternalNodeLabels: true});
+      tree2.setTreeType('rectangular');
+      tree2.setNodeSize(10);
+      tree2.setTextSize(16);
+      tree2.lineWidth = 2.5;
+      console.log(tree2.load('(((Tunicates:0.05)Urochordata-subphylum: 0.1,(Lancelets:0.05) Cephalochordata-subphulum:0.13,(Agnatha-superclass:0.005,Chondrichthyes-class:0.01,Osteichthyes-class:0.02,Amphibia-class:0.03, Saurposida-clade:0.04, Mammalia-class:0.05) Vertebrata-subphylum:0.16) Chordata-phylum:0.10'));
      })(window.Phylocanvas);
